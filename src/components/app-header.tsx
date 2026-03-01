@@ -28,7 +28,7 @@ export function AppHeader() {
       </div>
       <div className="flex flex-1" />
       <div className="flex items-center gap-2">
-        <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button size="sm" variant="default">
           Earn €90
         </Button>
         <DropdownMenu>
