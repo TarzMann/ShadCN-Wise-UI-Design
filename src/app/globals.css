@@ -31,8 +31,10 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-hover: var(--secondary-hover);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
@@ -62,7 +64,9 @@
 
   /* Brand green */
   --brand-green-100: #D6F9CE;
+  --brand-green-200: #C0F4B6;
   --brand-green-500: #9EE770;
+  --brand-green-600: #81e143;
   --brand-green-700: #163300;
 }
 
@@ -92,7 +96,9 @@
   /* Interactive */
   --primary: var(--brand-green-500);
   --primary-foreground: var(--brand-green-700);
+  --primary-hover: var(--brand-green-600);
   --secondary: var(--brand-green-100);
+  --secondary-hover: var(--brand-green-200);
   --secondary-foreground: var(--brand-green-700);
   --muted: var(--grey-200);
   --muted-foreground: var(--grey-400);
@@ -138,7 +144,9 @@
   /* Interactive */
   --primary: var(--brand-green-500);
   --primary-foreground: var(--brand-green-700);
+  --primary-hover: var(--brand-green-600);
   --secondary: var(--brand-green-700);
+  --secondary-hover: var(--brand-green-200);
   --secondary-foreground: var(--brand-green-500);
   --muted: var(--grey-500);
   --muted-foreground: var(--grey-400);
