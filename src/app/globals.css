@@ -89,6 +89,8 @@
   --foreground: var(--grey-500);
   --card: var(--grey-200);
   --card-foreground: var(--grey-600);
+  --color-card: var(--grey-200);
+  --color-card-foreground: var(--grey-600);
   --popover: var(--grey-100);
   --popover-foreground: var(--grey-500);
 
@@ -120,7 +122,7 @@
   --chart-5: #e76f51;
 
   /* Sidebar */
-  --sidebar: var(--grey-200);
+  --sidebar: var(--grey-100);
   --sidebar-foreground: var(--grey-500);
   --sidebar-primary: var(--brand-green-500);
   --sidebar-primary-foreground: var(--brand-green-700);
