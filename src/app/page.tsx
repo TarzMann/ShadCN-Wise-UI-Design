@@ -40,11 +40,14 @@ const RECENT_TRANSACTIONS = [
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col gap-8 p-6">
+    <div className="flex flex-1 flex-col gap-14 p-6 max-w-[976px] w-full mx-auto">
       {/* Total balance + actions */}
+      <div className="flex flex-col gap-6">
       <section className="space-y-4">
-        <h2 className="text-sm font-medium text-muted-foreground">Total balance</h2>
-        <p className="text-3xl font-bold tracking-tight">1.00 EUR</p>
+        <div>
+          <h2 className="text-base font-regular text-muted-foreground">Total balance</h2>
+          <p className="text-3xl font-semibold tracking-tight">98.00 EUR</p>
+        </div>
         <div className="flex flex-wrap gap-2">
           <Button size="sm" variant="default">
              Send money
@@ -52,17 +55,9 @@ export default function Home() {
           <Button size="sm" variant="secondary">
             Add money
           </Button>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size="sm" variant="secondary">
-                Request money
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem>Request from bank account</DropdownMenuItem>
-              <DropdownMenuItem>Request from card</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button size="sm" variant="secondary">
+            Request money
+          </Button>
         </div>
       </section>
 
@@ -81,6 +76,7 @@ export default function Home() {
           </Card>
         ))}
       </section>
+      </div>
 
       {/* Recent transactions */}
       <section className="space-y-4">
