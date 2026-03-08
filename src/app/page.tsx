@@ -41,7 +41,7 @@ const RECENT_TRANSACTIONS = [
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col gap-14 p-6 max-w-[976px] w-full mx-auto">
+    <div className="flex flex-1 flex-col gap-14 pt-16 px-6 pb-6 max-w-[976px] w-full mx-auto">
       {/* Total balance + actions */}
       <div className="flex flex-col gap-6">
       <section className="space-y-4">
@@ -88,27 +88,30 @@ export default function Home() {
           <h2 className="text-lg font-semibold">Transactions</h2>
           <Link
             href="/"
-            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            className="text-sm font-semibold text-primary-foreground underline-offset-4 hover:underline"
           >
             See all
           </Link>
         </div>
-        <ul className="divide-y divide-border rounded-lg border bg-card">
+        <ul className="rounded-lg bg-background">
           {RECENT_TRANSACTIONS.map((tx) => (
             <li key={tx.id} className="flex items-center gap-4 px-4 py-3">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted">
-                <tx.icon className="size-5 text-muted-foreground" />
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-muted">
+                <tx.icon className="size-6 text-muted-foreground" />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="font-medium">{tx.name}</p>
                 <p className="text-sm text-muted-foreground">{tx.subtitle}</p>
-                {tx.subAmount && (
-                  <p className="text-xs text-muted-foreground">{tx.subAmount}</p>
-                )}
+                
               </div>
-              <p className={`shrink-0 text-right font-medium ${tx.isCredit ? "text-primary" : ""}`}>
+              <div className="flex flex-col items-end">
+              <p className={`shrink-0 text-right font-medium ${tx.isCredit ? "text-primary-foreground" : ""}`}>
                 {tx.amount}
               </p>
+              {tx.subAmount && (
+                  <p className="text-xs text-muted-foreground text-right">{tx.subAmount}</p>
+                )}
+                </div>
             </li>
           ))}
         </ul>
