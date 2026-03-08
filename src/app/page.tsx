@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import {
   Card,
@@ -26,10 +27,10 @@ import { ArrowUpCircle, PlusCircle, ChevronDown } from "lucide-react"
  */
 
 const CURRENCY_ACCOUNTS = [
-  { code: "EUR", label: "EUR", accountId: "51568", balance: "1.00", flag: "🇪🇺" },
-  { code: "AUD", label: "AUD", accountId: "30779", balance: "0.00", flag: "🇦🇺" },
-  { code: "CAD", label: "CAD", accountId: "15376", balance: "0.00", flag: "🇨🇦" },
-  { code: "GBP", label: "GBP", accountId: "13159", balance: "0.00", flag: "🇬🇧" },
+  { code: "EUR", label: "EUR", accountId: "51568", balance: "1.00", flag: "/assets/europe.png" },
+  { code: "AUD", label: "AUD", accountId: "30779", balance: "0.00", flag: "/assets/australia.png" },
+  { code: "CAD", label: "CAD", accountId: "15376", balance: "0.00", flag: "/assets/canada.png" },
+  { code: "GBP", label: "GBP", accountId: "13159", balance: "0.00", flag: "/assets/united-kingdom.png" },
 ]
 
 const RECENT_TRANSACTIONS = [
@@ -62,16 +63,19 @@ export default function Home() {
       </section>
 
       {/* Currency account cards */}
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="flex gap-3 overflow-x-auto pb-2">
         {CURRENCY_ACCOUNTS.map((account) => (
-          <Card key={account.code} className="bg-muted/50">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <span className="text-lg" aria-hidden>{account.flag}</span>
-              <CardTitle className="text-base font-medium">{account.label}</CardTitle>
+          <Card key={account.code} className="w-[256px] h-[206px] shrink-0 flex flex-col bg-card">
+            <CardHeader className="flex flex-row items-center justify-start space-y-0 pb-2">
+              <Image src={account.flag} alt={account.label} width={48} height={48} />
+              <CardTitle className="text-lg font-semibold text-muted-foreground">{account.label}</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-1">
-              <p className="text-xs text-muted-foreground">Account - {account.accountId}</p>
-              <p className="text-2xl font-bold">{account.balance}</p>
+            <CardContent className="space-y-0 mt-auto">
+              <div className="flex items-center gap-1">
+                <Image src="/assets/icon/bank.png" alt="Bank" width={16} height={16} />
+                <p className="text-sm text-muted-foreground">Account - {account.accountId}</p>
+              </div>
+              <p className="text-2xl font-semibold text-card-foreground">{account.balance}</p>
             </CardContent>
           </Card>
         ))}

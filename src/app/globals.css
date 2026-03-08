@@ -68,7 +68,6 @@
   --brand-green-500: #9EE770;
   --brand-green-600: #81e143;
   --brand-green-700: #163300;
-}
 
 /* ==========================================================================
    DESIGNER NOTE: Theme variables (light mode)
@@ -82,14 +81,14 @@
    — --radius: default border radius (buttons, cards, inputs)
    — --sidebar-*: sidebar-specific colours
    ========================================================================== */
-:root {
+
   --radius: 0.625rem;
 
   /* Surfaces */
   --background: var(--grey-100);
   --foreground: var(--grey-500);
-  --card: var(--grey-100);
-  --card-foreground: var(--grey-500);
+  --card: var(--grey-200);
+  --card-foreground: var(--grey-600);
   --popover: var(--grey-100);
   --popover-foreground: var(--grey-500);
 
