@@ -126,7 +126,7 @@
   --sidebar-foreground: var(--grey-500);
   --sidebar-primary: var(--brand-green-500);
   --sidebar-primary-foreground: var(--brand-green-700);
-  --sidebar-accent: var(--grey-300);
+  --sidebar-accent: var(--grey-200);
   --sidebar-accent-foreground: var(--grey-500);
   --sidebar-border: var(--grey-300);
   --sidebar-ring: var(--grey-400);
